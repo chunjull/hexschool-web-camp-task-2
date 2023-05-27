@@ -44,7 +44,12 @@ table {
 	border-spacing: 0;
 }
 
-/* body */
+/* 共通設定 */
 body {
     font-family: 'Noto Sans TC', sans-serif;
+} 
+
+.wrap {
+    width: 1296px;
+    margin: 0 auto;
 }

@@ -4,16 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>AI 工具王</title>
+    <link rel="shortcut icon" href="#">
+    <meta name='description' content="透過 AI 工具王的強大模型讓您的業務更聰明"/>
+	<meta name="keyword" content="AI 工具王, AI, AI 技術, 圖像識別, 自然語言處理, 機器翻譯">
+    <meta property="og:title" content="AI 工具王" />
+    <meta property="og:description" content="透過 AI 工具王的強大模型讓您的業務更聰明">
+    <meta property="og:type" content="#" />
+    <meta property="og:url" content="#" />
+    <meta property="og:image" content="#" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="wrap">
         <header>
-            <h1><a href="./index.html">AI 工具王</a></h1>
+            <h1 class="logo">
+                <a href="./index.html">
+                    <img src="./assets/logo.png" alt="logo">
+                </a>
+            </h1>
             <ul class="navbar">
                 <li class="nav-item">
                     <a href="./index.html">首頁</a>
@@ -24,29 +38,26 @@
             </ul>
         </header>
         <div class="banner">
-            <div class="content">
-                <h2>透過<br>AI 工具王的<br>強大模型<br>讓您的業務更聰明</h2>
-                <a href="#">開始使用</a>
-            </div>
+            <h2>透過<br>AI 工具王的<br>強大模型<br>讓您的業務更聰明</h2>
+            <a href="#">開始使用</a>
             <div class="animate">
                 <img src="./assets/banner-animate.gif" alt="banner-animation">
             </div>
         </div>
-        <div class="feature-card">
+    </div>
+    <div class="feature-card">
             <div class="feature-container">
                 <h2>這些超酷的應用，都來自 AI工具王</h2>
-                <form action="index.html">
-                    <div class="search-bar">
-                        <img src="./assets/icons/search.png" alt="search-icon">
-                        <input type="text" name="search" placeholder="請輸入關鍵字搜尋">                        </div>
-                </form>
+                <label>
+                    <input type="text" placeholder="請輸入關鍵字搜尋" class="search-bar">
+                    <i class="fa fa-search"></i>
+                </label>
                 <div class="function">
-                    <button type="button">
-                        <span>篩選</span>
-                        <img src="./assets/icons/sliders-horizontal.png" alt="filter-icon">
-                    </button>
+                    <a href="#" class="btn">
+                        篩選<img src="./assets/icons/sliders-horizontal.png" alt="filter-icon">
+                    </a>
                     <ul class="function-list">
-                        <li class="function-item">
+                        <li class="function-item  is-active">
                             <a href="#">全部</a>
                         </li>
                         <li class="function-item">
@@ -68,15 +79,14 @@
                             <a href="#">生產力</a>
                         </li>
                     </ul>
-                    <button type="button">
-                        <span>由新到舊</span>
-                        <img src="./assets/icons/keyboard arrow down.png" alt="arrow-down-icon">
-                    </button>
+                    <a href="#" class="btn">
+                        由新到舊<img src="./assets/icons/keyboard arrow down.png" alt="arrow-down-icon">
+                    </a>
                 </div>
                 <ul class="card-list">
                     <li class="card-item">
                         <div class="card-image">
-                            <img src="img/tool1.png" alt="AI-model 01">
+                            <img src="./assets/tool1.png" alt="AI-model 01">
                         </div>
                         <div class="card-description">
                             <h4>Chatbot Builder</h4>
@@ -88,12 +98,12 @@
                         </div>
                         <div class="card-info">
                             <a href="#">#聊天</a>
-                            <a href="#"><span class="material-icons">share</span></a>
+                            <a href="#"><img src="./assets/icons/share.png" alt="share-icon"></a>
                         </div>
                     </li>
                     <li class="card-item">
                         <div class="card-image">
-                            <img src="img/tool2.png" alt="AI-model 02">
+                            <img src="./assets/tool2.png" alt="AI-model 02">
                         </div>
                         <div class="card-description">
                             <h4>Image Recognition Platform</h4>
@@ -105,12 +115,12 @@
                         </div>
                         <div class="card-info">
                             <a href="#">#影像辨識</a>
-                            <a href="#"><span class="material-icons">share</span></a>
+                            <a href="#"><img src="./assets/icons/share.png" alt="share-icon"></a>
                         </div>
                     </li>
                     <li class="card-item">
                         <div class="card-image">
-                            <img src="img/tool3.png" alt="AI-model 03">
+                            <img src="./assets/tool3.png" alt="AI-model 03">
                         </div>
                         <div class="card-description">
                             <h4>Language Translation API</h4>
@@ -122,12 +132,12 @@
                         </div>
                         <div class="card-info">
                             <a href="#">#翻譯</a>
-                            <a href="#"><span class="material-icons">share</span></a>
+                            <a href="#"><img src="./assets/icons/share.png" alt="share-icon"></a>
                         </div>
                     </li>
                     <li class="card-item">
                         <div class="card-image">
-                            <img src="img/tool4.png" alt="AI-model 04">
+                            <img src="./assets/tool4.png" alt="AI-model 04">
                         </div>
                         <div class="card-description">
                             <h4>Sentiment Analysis API</h4>
@@ -139,12 +149,12 @@
                         </div>
                         <div class="card-info">
                             <a href="#">#行銷</a>
-                            <a href="#"><span class="material-icons">share</span></a>
+                            <a href="#"><img src="./assets/icons/share.png" alt="share-icon"></a>
                         </div>
                     </li>
                     <li class="card-item">
                         <div class="card-image">
-                            <img src="img/tool5.png" alt="AI-model 05">
+                            <img src="./assets/tool5.png" alt="AI-model 05">
                         </div>
                         <div class="card-description">
                             <h4>Fraud Detection Platform</h4>
@@ -156,12 +166,12 @@
                         </div>
                         <div class="card-info">
                             <a href="#">#客服</a>
-                            <a href="#"><span class="material-icons">share</span></a>
+                            <a href="#"><img src="./assets/icons/share.png" alt="share-icon"></a>
                         </div>
                     </li>
                     <li class="card-item">
                         <div class="card-image">
-                            <img src="img/tool6.png" alt="AI-model 06">
+                            <img src="./assets/tool6.png" alt="AI-model 06">
                         </div>
                         <div class="card-description">
                             <h4>Voice Assistant SDK</h4>
@@ -173,13 +183,13 @@
                         </div>
                         <div class="card-info">
                             <a href="#">#生產力</a>
-                            <a href="#"><span class="material-icons">share</span></a>
+                            <a href="#"><img src="./assets/icons/share.png" alt="share-icon"></a>
                         </div>
                     </li>
                 </ul>
                 <ul class="pagination">
                     <li class="page-item">
-                        <a href="#">1</a>
+                        <a href="#" class="is-active">1</a>
                     </li>
                     <li class="page-item">
                         <a href="#">2</a>
@@ -195,46 +205,50 @@
                     </li>
                     <li class="page-item">
                         <a href="#">
-                            <img src="./assets/icons/keyboard arrow right.png" alt="arrow-right-icon">
+                            <i class="fa fa-chevron-right"></i>
                         </a>
                     </li>
                 </ul>
             </div>
-        </div>
+    </div>
+    <div class="wrap">
         <div class="cta">
             <h2>現在就來建立屬於你的服務吧</h2>
-            <button type="button">
-                <span>開始使用</span>
-                <img src="./assets/icons/call made.png" alt="call-to-action">
-            </button>
+            <a href="#" class="btn">
+                開始使用<img src="./assets/icons/call made.png" alt="call-to-action">
+            </a>
         </div>
         <footer>
             <div class="footer-top">
                 <ul class="footer-navbar">
-                    <li class="nav-item">
+                    <li class="footer-nav-item">
                         <a href="./index.html">首頁</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="footer-nav-item">
                         <a href="./price.html">定價</a>
                     </li>
                 </ul>
-                <h1>
-                    <a href="index.html">AI 工具王</a>
-                </h1>
+                <h2 class="logo">
+                    <a href="./index.html">
+                        <img src="./assets/logo.png" alt="logo">
+                    </a>
+                </h2>
             </div>
             <div class="footer-bottom">
-                <p>AI工具王 © 2023</p>
-                <ul class="media-list">
-                    <li class="media-item">
-                        <a href="#">Facebook</a>
-                    </li>
-                    <li class="media-item">
-                        <a href="#">Twitter</a>
-                    </li>
-                    <li class="media-item">
-                        <a href="#">Instagram</a>
-                    </li>
-                </ul>
+                <div class="footer-bottom-content">
+                    <p>AI工具王 © 2023</p>
+                    <ul class="media-list">
+                        <li class="media-item">
+                            <a href="#">Facebook</a>
+                        </li>
+                        <li class="media-item">
+                            <a href="#">Twitter</a>
+                        </li>
+                        <li class="media-item">
+                            <a href="#">Instagram</a>
+                        </li>
+                    </ul>
+                </div>
                 <div class="back-to-top">
                     <a href="#">
                         Back to top

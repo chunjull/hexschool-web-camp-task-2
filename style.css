@@ -427,14 +427,14 @@ header {
     padding-top: 24px;
 }
 
-.function-rwd, .btn, .function .btn {
+.function-btn {
     color: #020202;
     padding: 20px 32px;
     border: 1px solid #F2F2F2;
     border-radius: 12px;
 }
 
-.function .btn:hover, .function .btn:active {
+.function-btn:hover, .function-btn:active {
     background: #F2F2F2;
 }
 
@@ -451,6 +451,10 @@ header {
     display: flex;
     align-items: center;
     gap: 228px;
+}
+
+.scroll {
+    overflow-x: scroll;
 }
 
 .function-list {
@@ -491,7 +495,7 @@ header {
     }
 
     .scroll {
-        overflow-x: scroll;
+        width: 90%;
     }
 
     .function-list {
@@ -636,7 +640,7 @@ header {
     margin-bottom: 60px; /* 不確定能否這樣推出 40px */
 }
 
-.cta .btn {
+.cta-btn {
     color: #fff;
     font-size: 20px;
     font-weight: 900;
@@ -645,11 +649,11 @@ header {
     border-radius: 12px;
 }
 
-.cta .btn:hover {
+.cta-btn:hover {
     background: rgba(255, 255, 255, 0.2);
 }
 
-.cta .btn img {
+.cta-btn img {
     padding-left: 12px;
     vertical-align: middle;
 }

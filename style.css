@@ -79,37 +79,78 @@ img {
 }
 
 /* header */
-header {
-    padding: 20px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #fff;
-}
-
+/* 參考每日任務 Day19 Navbar 隨著斷點變換樣式、排版 */
 .logo {
     width: 245px;
 }
 
-@media(max-width: 767px) {
-    .logo {
-        width: 174px;
-    }
+.me-20 {
+    margin-right: 20px;
 }
 
 .navbar {
     display: flex;
-    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #ffffff;
+    position: relative;
 }
 
-.nav-item a {
-    line-height: 1.5;
+.navbar a {
     font-weight: 700;
 }
 
+.navbar-menu {
+    display: flex;
+}
+
+.navbar-btn {
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+    color: #ffffff;
+    display: none;  /* 在電腦版時不顯示 */
+}
+
+.navbar-btn:hover {
+    transform: scale(1.1);
+}
+
+.navbar-collapse {
+    display: none;  /* 在電腦版時不顯示 */
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    min-height: calc(100vh - 81px); /* 佔滿整個瀏覽器高度扣掉 navbar 高度 */
+    background-color: #000000;
+    border-top: 1px solid #ffffff;
+}
+
+.navbar-collapse a {
+    font-size: 80px;
+    line-height: 1.2;
+    margin: 4px 0;
+}
+
 .nav-item a:hover {
-    padding-bottom: 8px;
-    border-bottom: 1px solid #fff;
+    color: #d1d1d1;
+}
+
+@media (max-width: 768px) {
+    .navbar-btn {
+        display: block;
+    }
+    
+    .navbar-menu {
+        display: none;
+    }
+    
+    .navbar-collapse.roll {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
 
 /* banner */
@@ -239,63 +280,100 @@ header {
 
 .partner-logo {
     padding-top: 80px;
+}
+
+/* 參考每日任務 Day23 overflow 跟側邊陰影定位 */
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .mb-md-120 {
+        margin-bottom: 120px;
+    }
+}
+
+.enterprise {
+    display: flex;
+    justify-content: center;
+    overflow-x: auto;
     position: relative;
 }
 
-.partner-logo img {
+  /* 隱藏 x 軸 */
+  /* Hide scrollbar for Chrome, Safari and Opera */
+.enterprise::-webkit-scrollbar {
+    display: none;
+}
+  /* Hide scrollbar for IE, Edge and Firefox */
+.enterprise {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+.enterprise::after,
+.enterprise::before {
+    content:"";
+    position: sticky;
+    width: 196px;
     height: 40px;
+    top: 0;
+}
+.enterprise::before {
+    left: 0;
+    padding-right: 196px;
+    background: linear-gradient(90deg,
+    #000000 0%,
+    rgba(0, 0, 0, 0.991615) 11.79%,
+    rgba(0, 0, 0, 0.967585) 21.38%,
+    rgba(0, 0, 0, 0.9296) 29.12%,
+    rgba(0, 0, 0, 0.879348) 35.34%,
+    rgba(0, 0, 0, 0.818519) 40.37%,
+    rgba(0, 0, 0, 0.7488) 44.56%,
+    rgba(0, 0, 0, 0.671881) 48.24%,
+    rgba(0, 0, 0, 0.589452) 51.76%,
+    rgba(0, 0, 0, 0.5032) 55.44%,
+    rgba(0, 0, 0, 0.414815) 59.63%,
+    rgba(0, 0, 0, 0.325985) 64.66%,
+    rgba(0, 0, 0, 0.2384) 70.88%,
+    rgba(0, 0, 0, 0.153748) 78.62%,
+    rgba(0, 0, 0, 0.0737185) 88.21%,
+    rgba(0, 0, 0, 0) 100%
+    );
 }
 
-.partner-logo-list-top, .partner-logo-list-bottom {
-    display: flex;
-}
-
-.partner-logo-list-bottom {
-    padding-top: 12px;
-    margin-left: 20px;
-}
-
-.logo-small {
-    width: 100px;
-}
-
-@media(max-width: 767px) {
-    .partner {
-        padding-top: 120px;
-    }
-
-    .partner h2 {
-        font-size: 20px;
-    }
-
-    .partner-logo {
-        padding-top: 24px;
-    }
-}
-
-.mask-left {
-    width: 196px;
-    height: 100px;
-    background: linear-gradient(to right, rgb(0, 0, 0), rgba(0, 0, 0, 0) 100%);
-    position: absolute;
-}
-
-.mask-right {
-    width: 196px;
-    height: 100px;
-    background: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(0, 0, 0) 100%);
-    position: absolute;
+.enterprise::after {
     right: 0;
+    padding-left: 196px;
+    background: linear-gradient(90deg,
+    #000000 0%,
+    rgba(0, 0, 0, 0.991615) 11.79%,
+    rgba(0, 0, 0, 0.967585) 21.38%,
+    rgba(0, 0, 0, 0.9296) 29.12%,
+    rgba(0, 0, 0, 0.879348) 35.34%,
+    rgba(0, 0, 0, 0.818519) 40.37%,
+    rgba(0, 0, 0, 0.7488) 44.56%,
+    rgba(0, 0, 0, 0.671881) 48.24%,
+    rgba(0, 0, 0, 0.589452) 51.76%,
+    rgba(0, 0, 0, 0.5032) 55.44%,
+    rgba(0, 0, 0, 0.414815) 59.63%,
+    rgba(0, 0, 0, 0.325985) 64.66%,
+    rgba(0, 0, 0, 0.2384) 70.88%,
+    rgba(0, 0, 0, 0.153748) 78.62%,
+    rgba(0, 0, 0, 0.0737185) 88.21%,
+    rgba(0, 0, 0, 0) 100%
+    );
+    transform: rotate(-180deg);
 }
 
-@media(max-width: 767px) {
-    .mask-left, .mask-right {
-        width: 82px;
-    }
-}
-
-.mr-20 ~ .mr-20 {
+.enterprise li:not(:last-child) {
     margin-right: 20px;
+}
+
+.enterprise img {
+    width: 160px;
+    height: 40px;
+    max-width: initial;
 }
 
 /* recommend */
@@ -451,9 +529,6 @@ header {
     display: flex;
     align-items: center;
     gap: 228px;
-}
-
-.scroll {
     overflow-x: scroll;
 }
 
@@ -494,10 +569,6 @@ header {
         gap: 16px;
     }
 
-    .scroll {
-        width: 90%;
-    }
-
     .function-list {
         white-space: nowrap;
     }
@@ -511,12 +582,6 @@ header {
 
     .invisible-rwd {
         display: none;
-    }
-}
-
-@media(max-width: 375px) {
-    .scroll {
-        width: 351px;
     }
 }
 
@@ -713,7 +778,7 @@ header {
 }
 
 .media-item a:hover {
-    color: #525252;
+    color: #d1d1d1;
 }
 
 @media(max-width: 767px) {

@@ -62,7 +62,7 @@ body {
     margin: 0 auto;
 }
 
-@media(max-width: 768px) {
+@media(max-width: 767px) {
     .wrap {
         padding: 0 12px;
     }
@@ -91,7 +91,7 @@ header {
     width: 245px;
 }
 
-@media(max-width: 768px) {
+@media(max-width: 767px) {
     .logo {
         width: 174px;
     }
@@ -130,7 +130,7 @@ header {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
-@media(max-width: 768px) {
+@media(max-width: 767px) {
     .banner h2 {
         font-size: 48px;
     }
@@ -146,7 +146,7 @@ header {
     width: 540px;
 }
 
-@media(max-width: 768px) {
+@media(max-width: 767px) {
     .animate {
         justify-content: start;
         padding-top: 180px;
@@ -198,7 +198,7 @@ header {
     padding-top: 20px;
 }
 
-@media(max-width: 768px) {
+@media(max-width: 767px) {
     .service {
         padding-top: 120px;
     }
@@ -246,7 +246,11 @@ header {
     height: 40px;
 }
 
-.partner-logo-bottom {
+.partner-logo-list-top, .partner-logo-list-bottom {
+    display: flex;
+}
+
+.partner-logo-list-bottom {
     padding-top: 12px;
     margin-left: 20px;
 }
@@ -255,7 +259,7 @@ header {
     width: 100px;
 }
 
-@media(max-width: 768px) {
+@media(max-width: 767px) {
     .partner {
         padding-top: 120px;
     }
@@ -284,7 +288,7 @@ header {
     right: 0;
 }
 
-@media(max-width: 768px) {
+@media(max-width: 767px) {
     .mask-left, .mask-right {
         width: 82px;
     }
@@ -341,7 +345,7 @@ header {
     margin-right: 4px;
 }
 
-@media(max-width: 768px) {
+@media(max-width: 767px) {
     .recommend {
         padding-top: 48px;
     }
@@ -377,6 +381,21 @@ header {
     text-align: center;
 }
 
+@media(max-width:768px) {
+    .feature-card {
+        border-radius: 20px;
+        padding: 80px 0;
+    }
+
+    .feature-container {
+        padding: 0 12px;
+    }
+
+    .feature-container h2 {
+        font-size: 32px;
+    }
+}
+
 .search-bar {
     width: 100%;
     padding: 20px 76px;
@@ -395,14 +414,20 @@ header {
     left: 40px;
 }
 
-.function {
+@media(max-width: 767px) {
+    .search-bar {
+        padding-top: 32px;
+    }
+}
+
+.function-rwd, .function {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-top: 24px;
 }
 
-.function .btn {
+.function-rwd, .btn, .function .btn {
     color: #020202;
     padding: 20px 32px;
     border: 1px solid #F2F2F2;
@@ -413,9 +438,19 @@ header {
     background: #F2F2F2;
 }
 
-.function img {
+.function-rwd img, .function img {
     padding-left: 12px;
     vertical-align: middle;
+}
+
+.function-rwd {
+    display: none;
+}
+
+.function-filter {
+    display: flex;
+    align-items: center;
+    gap: 228px;
 }
 
 .function-list {
@@ -442,6 +477,43 @@ header {
 
 .function-item a {
     color: #020202;
+}
+
+@media(max-width: 767px) {
+    .function {
+        align-items: baseline;
+    }
+
+    .function-filter {
+        flex-direction: column;
+        align-items: start;
+        gap: 16px;
+    }
+
+    .scroll {
+        overflow-x: scroll;
+    }
+
+    .function-list {
+        white-space: nowrap;
+    }
+
+    .function-rwd {
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+        border: none;
+    }
+
+    .invisible-rwd {
+        display: none;
+    }
+}
+
+@media(max-width: 375px) {
+    .scroll {
+        width: 351px;
+    }
 }
 
 .card-list {
@@ -517,6 +589,16 @@ header {
     cursor: pointer;
 }
 
+@media(max-width: 767px) {
+    .card-list {
+        gap: 12px;
+    }
+
+    .card-item {
+        width: 100%;
+    }
+}
+
 .pagination {
     display: flex;
     justify-content: end;
@@ -542,20 +624,6 @@ header {
     background: #020202;
 }
 
-@media(max-width: 768px) {
-    .feature-card {
-        border-radius: 20px;
-    }
-
-    .feature-container h2 {
-        font-size: 32px;
-    }
-
-    .search-bar {
-        padding-top: 32px;
-    }
-}
-
 /* cta */
 .cta {
     padding: 78px 0 80px 0;
@@ -569,6 +637,7 @@ header {
 }
 
 .cta .btn {
+    color: #fff;
     font-size: 20px;
     font-weight: 900;
     padding: 20px 32px;
@@ -604,7 +673,7 @@ header {
     color: #d1d1d1;
 }
 
-@media(max-width: 768px) {
+@media(max-width: 767px) {
     .footer-top {
         flex-direction: column;
     }
@@ -643,7 +712,7 @@ header {
     color: #525252;
 }
 
-@media(max-width: 768px) {
+@media(max-width: 767px) {
     .footer-bottom-content {
         flex-direction: column;
         gap: 36px;

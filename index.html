@@ -18,7 +18,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="style.css">
+    <script src="all.js"></script>
 </head>
 <body>
     <div class="wrap">
@@ -72,24 +74,52 @@
                 <div class="partner-logo">
                     <div class="mask-left"></div>
                     <div class="mask-right"></div>
-                    <div class="partner-logo-top">
-                        <img src="./assets/enterprise.png" alt="enterprise-logo" class="mr-20  logo-small">
-                        <img src="./assets/enterprise1.png" alt="enterprise-logo" class="mr-20">
-                        <img src="./assets/enterprise2.png" alt="enterprise-logo" class="mr-20">
-                        <img src="./assets/enterprise3.png" alt="enterprise-logo" class="mr-20">
-                        <img src="./assets/enterprise4.png" alt="enterprise-logo" class="mr-20">
-                        <img src="./assets/enterprise5.png" alt="enterprise-logo" class="mr-20">
-                        <img src="./assets/enterprise6.png" alt="enterprise-logo" class="mr-20">
-                    </div>
-                    <div class="partner-logo-bottom">
-                        <img src="./assets/enterprise7.png" alt="enterprise-logo" class="mr-20">
-                        <img src="./assets/enterprise8.png" alt="enterprise-logo" class="mr-20">
-                        <img src="./assets/enterprise9.png" alt="enterprise-logo" class="mr-20">
-                        <img src="./assets/enterprise5.png" alt="enterprise-logo" class="mr-20">
-                        <img src="./assets/enterprise11.png" alt="enterprise-logo" class="mr-20">
-                        <img src="./assets/enterprise12.png" alt="enterprise-logo" class="mr-20">
-                        <img src="./assets/enterprise7.png" alt="enterprise-logo" class="mr-20">
-                    </div>
+                    <ul class="partner-logo-list-top">
+                        <li class="mr-20">
+                            <img src="./assets/enterprise.png" alt="enterprise-logo" class="mr-20  logo-small">
+                        </li>
+                        <li class="mr-20">
+                            <img src="./assets/enterprise1.png" alt="enterprise-logo">
+                        </li>
+                        <li class="mr-20">
+                            <img src="./assets/enterprise2.png" alt="enterprise-logo">
+                        </li>
+                        <li class="mr-20">
+                            <img src="./assets/enterprise3.png" alt="enterprise-logo">
+                        </li>
+                        <li class="mr-20">
+                            <img src="./assets/enterprise4.png" alt="enterprise-logo">
+                        </li>
+                        <li class="mr-20">
+                            <img src="./assets/enterprise5.png" alt="enterprise-logo">
+                        </li>
+                        <li class="mr-20">
+                            <img src="./assets/enterprise6.png" alt="enterprise-logo">
+                        </li>
+                    </ul>
+                    <ul class="partner-logo-list-bottom">
+                        <li class="mr-20">
+                            <img src="./assets/enterprise7.png" alt="enterprise-logo">
+                        </li>
+                        <li class="mr-20">
+                            <img src="./assets/enterprise8.png" alt="enterprise-logo">
+                        </li>
+                        <li class="mr-20">
+                            <img src="./assets/enterprise9.png" alt="enterprise-logo">
+                        </li>
+                        <li class="mr-20">
+                            <img src="./assets/enterprise5.png" alt="enterprise-logo">
+                        </li>
+                        <li class="mr-20">
+                            <img src="./assets/enterprise11.png" alt="enterprise-logo">
+                        </li>
+                        <li class="mr-20">
+                            <img src="./assets/enterprise12.png" alt="enterprise-logo">
+                        </li>
+                        <li class="mr-20">
+                            <img src="./assets/enterprise7.png" alt="enterprise-logo">
+                        </li>
+                    </ul>
                 </div>
         </div>
         <div class="recommend">
@@ -155,36 +185,54 @@
                     <input type="text" placeholder="請輸入關鍵字搜尋" class="search-bar">
                     <i class="fa fa-search"></i>
                 </label>
+                <div class="function-rwd">
+                    <div class="function-filter">
+                        <a href="#" class="btn">
+                            篩選<img src="./assets/icons/sliders-horizontal.png" alt="filter-icon">
+                        </a>
+                    </div>
+                    <div class="funciton-sort">
+                        <a href="#" class="btn">
+                            由新到舊<img src="./assets/icons/keyboard arrow down.png" alt="arrow-down-icon">
+                        </a>
+                    </div>
+                </div>
                 <div class="function">
-                    <a href="#" class="btn">
-                        篩選<img src="./assets/icons/sliders-horizontal.png" alt="filter-icon">
-                    </a>
-                    <ul class="function-list">
-                        <li class="function-item  is-active">
-                            <a href="#">全部</a>
-                        </li>
-                        <li class="function-item">
-                            <a href="#">聊天</a>
-                        </li>
-                        <li class="function-item">
-                            <a href="#">影像辨識</a>
-                        </li>
-                        <li class="function-item">
-                            <a href="#">翻譯</a>
-                        </li>
-                        <li class="function-item">
-                            <a href="#">行銷</a>
-                        </li>
-                        <li class="function-item">
-                            <a href="#">客服</a>
-                        </li>
-                        <li class="function-item">
-                            <a href="#">生產力</a>
-                        </li>
-                    </ul>
-                    <a href="#" class="btn">
-                        由新到舊<img src="./assets/icons/keyboard arrow down.png" alt="arrow-down-icon">
-                    </a>
+                    <div class="function-filter">
+                        <a href="#" class="btn  invisible-rwd">
+                            篩選<img src="./assets/icons/sliders-horizontal.png" alt="filter-icon">
+                        </a>
+                        <div class="scroll">
+                            <ul class="function-list">
+                                <li class="function-item  is-active">
+                                    <a href="#">全部</a>
+                                </li>
+                                <li class="function-item">
+                                    <a href="#">聊天</a>
+                                </li>
+                                <li class="function-item">
+                                    <a href="#">影像辨識</a>
+                                </li>
+                                <li class="function-item">
+                                    <a href="#">翻譯</a>
+                                </li>
+                                <li class="function-item">
+                                    <a href="#">行銷</a>
+                                </li>
+                                <li class="function-item">
+                                    <a href="#">客服</a>
+                                </li>
+                                <li class="function-item">
+                                    <a href="#">生產力</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="funciton-sort  invisible-rwd">
+                        <a href="#" class="btn">
+                            由新到舊<img src="./assets/icons/keyboard arrow down.png" alt="arrow-down-icon">
+                        </a>
+                    </div>
                 </div>
                 <ul class="card-list">
                     <li class="card-item">
@@ -361,5 +409,7 @@
             </div>
         </footer>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
 </body>
 </html>

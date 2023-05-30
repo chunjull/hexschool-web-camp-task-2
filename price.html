@@ -18,31 +18,107 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="wrap">
         <header>
-            <h1 class="logo">
+            <div class="navbar">
                 <a href="./index.html">
-                    <img src="./assets/logo.png" alt="logo">
+                    <img src="./assets/logo.png" alt="logo" class="logo">
                 </a>
-            </h1>
-            <ul class="navbar">
-                <li class="nav-item">
-                    <a href="./index.html">首頁</a>
-                </li>
-                <li class="nav-item">
-                    <a href="./price.html">定價</a>
-                </li>
-            </ul>
+                <button type="button" class="navbar-btn">
+                    <img src="./assets/icons/menu.png" alt="menu-icon">
+                </button>
+                <ul class="navbar-menu">
+                    <li class="nav-item"><a href="index.html" class="text-white me-20">首頁</a></li>
+                    <li class="nav-item"><a href="price.html" class="text-white">定價</a></li>
+                </ul>
+                <div class="navbar-collapse">
+                    <ul>
+                        <li class="nav-item"><a href="index.html" class="text-white me-20">首頁</a></li>
+                        <li class="nav-item"><a href="price.html" class="text-white">定價</a></li>
+                    </ul>
+                </div>
+            </div>
         </header>
-        <div class="banner">
-            <h2>透過<br>AI 工具王的<br>強大模型<br>讓您的業務更聰明</h2>
-            <a href="#">開始使用</a>
-            <div class="animate">
+        <div class="price-banner">
+            <h2>用多少，<br>付多少。</h2>
+            <div class="price-banner-content">
+                <h3>我們相信，最靈活的取用機制，才能最大化的幫助你業務的推動。</h3>
+            </div>
+            <div class="price-banner-animate">
                 <img src="./assets/banner-animate.gif" alt="banner-animation">
             </div>
+        </div>
+        <div class="price-detail">
+            <h3>定價</h3>
+            <ul class="price-detail-list">
+                <li class="price-detail-item">
+                    <h4>琪琪</h4>
+                    <ul class="price-detail-content">
+                        <li>初級</li>
+                        <li>速度最快</li>
+                    </ul>
+                    <div class="border"></div>
+                    <div class="price-detail-info">
+                        <p>NT$5<span>／1k tokens</span></p>
+                        <a href="#">開始使用<img src="./assets/icons/call made.png" alt="call-made-icon"></a>
+                    </div>
+                </li>
+                <li class="price-detail-item">
+                    <h4>昊昊</h4>
+                    <ul class="price-detail-content">
+                        <li>中級</li>
+                    </ul>
+                    <div class="border"></div>
+                    <div class="price-detail-info">
+                        <p>NT$5<span>／1k tokens</span></p>
+                        <a href="#">開始使用<img src="./assets/icons/call made.png" alt="call-made-icon"></a>
+                    </div>
+                </li>
+                <li class="price-detail-item">
+                    <h4>卡卡</h4>
+                    <ul class="price-detail-content">
+                        <li>高級</li>
+                    </ul>
+                    <div class="border"></div>
+                    <div class="price-detail-info">
+                        <p>NT$5<span>／1k tokens</span></p>
+                        <a href="#">開始使用<img src="./assets/icons/call made.png" alt="call-made-icon"></a>
+                    </div>
+                </li>
+                <li class="price-detail-item">
+                    <h4>杰杰</h4>
+                    <ul class="price-detail-content">
+                        <li>最高級</li>
+                        <li>資訊最完善</li>
+                    </ul>
+                    <div class="border"></div>
+                    <div class="price-detail-info">
+                        <p>NT$5<span>／1k tokens</span></p>
+                        <a href="#">開始使用<img src="./assets/icons/call made.png" alt="call-made-icon"></a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="price-manual">
+            <h3>使用規範</h3>
+            <ul class="manual-list">
+                <li class="manual-item">
+                    <h4>守法</h4>
+                    <p>請遵守相關的法規和政策，不得進行任何違法違規的活動。</p>
+                </li>
+                <li class="manual-item  pt-40">
+                    <h4>資訊安全</h4>
+                    <p>請務必保護好自己的帳號和密碼，不得將其透露給他人。</p>
+                </li>
+                <li class="manual-item  pt-40">
+                    <h4>守密</h4>
+                    <p>需對使用過程中產生的數據負責，不得擅自泄露數據。</p>
+                </li>
+            </ul>
         </div>
     </div>
     <div class="feature-card">
@@ -52,36 +128,52 @@
                     <input type="text" placeholder="請輸入關鍵字搜尋" class="search-bar">
                     <i class="fa fa-search"></i>
                 </label>
+                <div class="function-rwd">
+                    <div class="function-filter">
+                        <a href="#" class="function-btn">
+                            篩選<img src="./assets/icons/sliders-horizontal.png" alt="filter-icon">
+                        </a>
+                    </div>
+                    <div class="funciton-sort">
+                        <a href="#" class="function-btn">
+                            由新到舊<img src="./assets/icons/keyboard arrow down.png" alt="arrow-down-icon">
+                        </a>
+                    </div>
+                </div>
                 <div class="function">
-                    <a href="#" class="btn">
-                        篩選<img src="./assets/icons/sliders-horizontal.png" alt="filter-icon">
-                    </a>
-                    <ul class="function-list">
-                        <li class="function-item  is-active">
-                            <a href="#">全部</a>
-                        </li>
-                        <li class="function-item">
-                            <a href="#">聊天</a>
-                        </li>
-                        <li class="function-item">
-                            <a href="#">影像辨識</a>
-                        </li>
-                        <li class="function-item">
-                            <a href="#">翻譯</a>
-                        </li>
-                        <li class="function-item">
-                            <a href="#">行銷</a>
-                        </li>
-                        <li class="function-item">
-                            <a href="#">客服</a>
-                        </li>
-                        <li class="function-item">
-                            <a href="#">生產力</a>
-                        </li>
-                    </ul>
-                    <a href="#" class="btn">
-                        由新到舊<img src="./assets/icons/keyboard arrow down.png" alt="arrow-down-icon">
-                    </a>
+                    <div class="function-filter">
+                        <a href="#" class="function-btn  invisible-rwd">
+                            篩選<img src="./assets/icons/sliders-horizontal.png" alt="filter-icon">
+                        </a>
+                        <ul class="function-list">
+                            <li class="function-item  is-active">
+                                <a href="#">全部</a>
+                            </li>
+                            <li class="function-item">
+                                <a href="#">聊天</a>
+                            </li>
+                            <li class="function-item">
+                                <a href="#">影像辨識</a>
+                            </li>
+                            <li class="function-item">
+                                <a href="#">翻譯</a>
+                            </li>
+                            <li class="function-item">
+                                <a href="#">行銷</a>
+                            </li>
+                            <li class="function-item">
+                                <a href="#">客服</a>
+                            </li>
+                            <li class="function-item">
+                                <a href="#">生產力</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="funciton-sort  invisible-rwd">
+                        <a href="#" class="function-btn">
+                            由新到舊<img src="./assets/icons/keyboard arrow down.png" alt="arrow-down-icon">
+                        </a>
+                    </div>
                 </div>
                 <ul class="card-list">
                     <li class="card-item">
@@ -212,21 +304,56 @@
             </div>
     </div>
     <div class="wrap">
+        <div class="faq">
+            <h3>常見問題</h3>
+            <ul class="faq-list">
+                <li class="faq-item  mb-16">
+                    <a href="#">
+                        <img src="./assets/icons/add.png" alt="add-icon">
+                    </a>
+                    <h5>如何選擇適合的AI模型？</h5>
+                </li>
+                <li class="faq-item  mb-16">
+                    <a href="#">
+                        <img src="./assets/icons/add.png" alt="add-icon">
+                    </a>
+                    <h5>租用模型的費用是如何計算的？</h5>
+                </li>
+                <li class="faq-item  mb-16">
+                    <a href="#">
+                        <img src="./assets/icons/add.png" alt="add-icon">
+                    </a>
+                    <h5>如何進行付款？</h5>
+                </li>
+                <li class="faq-item  mb-16">
+                    <a href="#">
+                        <img src="./assets/icons/add.png" alt="add-icon">
+                    </a>
+                    <h5>租用模型的期限是多久？</h5>
+                </li>
+                <li class="faq-item">
+                    <a href="#">
+                        <img src="./assets/icons/add.png" alt="add-icon">
+                    </a>
+                    <h5>如果在使用過程中遇到問題，應該怎麼處理？</h5>
+                </li>
+            </ul>
+        </div>
         <footer>
             <div class="footer-top">
+                <h2 class="logo">
+                    <a href="./index.html">
+                        <img src="./assets/logo.png" alt="logo">
+                    </a>
+                </h2>
                 <ul class="footer-navbar">
-                    <li class="footer-nav-item">
+                    <li class="footer-nav-item  pb-8">
                         <a href="./index.html">首頁</a>
                     </li>
                     <li class="footer-nav-item">
                         <a href="./price.html">定價</a>
                     </li>
                 </ul>
-                <h2 class="logo">
-                    <a href="./index.html">
-                        <img src="./assets/logo.png" alt="logo">
-                    </a>
-                </h2>
             </div>
             <div class="footer-bottom">
                 <div class="footer-bottom-content">
@@ -243,8 +370,8 @@
                         </li>
                     </ul>
                 </div>
-                <div class="back-to-top">
-                    <a href="#">
+                <div class="back-to-top" id="scrollToTop">
+                    <a href="/index.html">
                         Back to top
                         <img src="./assets/icons/arrow upward.png" alt="arrow-upward-icon">
                     </a>
@@ -252,5 +379,8 @@
             </div>
         </footer>
     </div>
+    
+    <script src="all.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
 </body>
 </html>

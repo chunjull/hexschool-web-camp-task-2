@@ -58,7 +58,8 @@ body {
 } 
 
 .wrap {
-    max-width: 1296px;
+    max-width: 1320px;
+    padding: 12px 0;
     margin: 0 auto;
 }
 
@@ -81,7 +82,15 @@ img {
 /* header */
 /* 參考每日任務 Day19 Navbar 隨著斷點變換樣式、排版 */
 .logo {
+    
+    background-image: url("./assets/logo.png");
+    background-size: cover;
     width: 245px;
+    height: 40px;
+    display: block;
+	text-indent: 101%;
+	overflow: hidden;
+	white-space: nowrap;
 }
 
 .me-20 {
@@ -178,13 +187,40 @@ img {
 }
 
 .animate {
-    display: flex;
-    justify-content: end;
-    padding-top: 100px;
+    margin-top: 180px;
+    overflow: hidden;
 }
 
 .animate img {
-    width: 540px;
+    max-width: 180px;
+    position: relative;
+    animation: slideUp 3.5s ease infinite;
+}
+
+.animate img:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.animate img:nth-child(1) {
+    animation-delay: 0.4s;
+}
+
+@keyframes slideUp {
+    0% {
+        top: 180px;
+    }
+    20% {
+        top: 0;
+    }
+    50% {
+        top: 0;
+    }
+    80% {
+        top: -180px;
+    }
+    100% {
+        top: -180px;
+    }
 }
 
 @media(max-width: 767px) {
@@ -192,11 +228,15 @@ img {
         justify-content: start;
         padding-top: 180px;
     }
+
+    .animate img {
+        width: 117px;
+    }
 }
 
 /* service */
 .service {
-    padding-top: 160px;
+    margin-top: 160px;
 }
 
 .service-content {
@@ -240,7 +280,7 @@ img {
 
 @media(max-width: 767px) {
     .service {
-        padding-top: 120px;
+        margin-top: 120px;
     }
 
     .service-content {
@@ -269,7 +309,7 @@ img {
 
 /* partner */
 .partner {
-    padding-top: 160px;
+    margin-top: 160px;
 }
 
 .partner h2 {
@@ -375,12 +415,9 @@ img {
     max-width: initial;
 }
 
-/* recommend */
-.recommend {
-    padding-top: 160px;
-}
-
+/* recommend-list */
 .recommend-list {
+    margin-top: 160px;
     display: flex;
     gap: 2%;
 }
@@ -423,11 +460,8 @@ img {
 }
 
 @media(max-width: 767px) {
-    .recommend {
-        padding-top: 48px;
-    }
-
     .recommend-list {
+        margin-top: 48px;
         flex-direction: column;
         gap: 12px;
     }
@@ -439,7 +473,6 @@ img {
 
 /* feature-card */
 .feature-card {
-    max-width: 1920px;
     background: #fff;
     border-radius: 160px;
     margin-top: 160px;
@@ -458,7 +491,7 @@ img {
     text-align: center;
 }
 
-@media(max-width:768px) {
+@media(max-width:767px) {
     .feature-card {
         border-radius: 20px;
         padding: 80px 0;
@@ -505,6 +538,10 @@ img {
 }
 
 .function-btn {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    font-size: 16px;
     color: #020202;
     padding: 20px 32px;
     border: 1px solid #F2F2F2;
@@ -557,7 +594,7 @@ img {
     color: #020202;
 }
 
-@media(max-width: 767px) {
+@media(max-width: 992px) {
     .function {
         align-items: baseline;
     }
@@ -606,13 +643,12 @@ img {
 }
 
 .card-image img {
-    border-radius: 16px 16px 0 0;
     width: 100%;
     height: 100%;
     transition: .5s;
 }
 
-.card-image img:hover {
+.card-item:hover .card-image img {
     transform: scale(1.5, 1.5);
 }
 
@@ -694,7 +730,7 @@ img {
 
 /* cta */
 .cta {
-    padding: 78px 0 80px 0;
+    margin: 78px 0 80px 0;
     text-align: center;
 }
 
@@ -817,7 +853,7 @@ img {
     justify-content: start;
 }
 
-@media(max-width: 676px) {
+@media(max-width: 767px) {
     .price-banner h2 {
         font-size: 48px;
     }
@@ -909,6 +945,12 @@ img {
     margin-top: 136px;
     padding: 0;
     border: 1px solid #525252;
+}
+
+@media(max-width: 992px) {
+    .price-detail-item {
+        width: 48%;
+    }
 }
 
 @media(max-width: 767px) {

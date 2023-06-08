@@ -59,14 +59,8 @@ body {
 
 .wrap {
     max-width: 1320px;
-    padding: 12px 0;
+    padding: 0 12px;
     margin: 0 auto;
-}
-
-@media(max-width: 767px) {
-    .wrap {
-        padding: 0 12px;
-    }
 }
 
 a {
@@ -886,7 +880,6 @@ img {
 
 .price-detail-item {
     width: 49%;
-    padding: 20px 32px;
     border: 1px solid #525252;
     border-radius: 16px;
     display: flex;
@@ -897,6 +890,10 @@ img {
 .price-detail-item h4 {
     font-size: 32px;
     font-weight: 900;
+}
+
+.price-detail-main {
+    padding: 20px 32px;
 }
 
 .price-detail-content {
@@ -910,7 +907,9 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 20px;
+    padding: 20px 32px;
+    border-top: 1px solid #525252;
+    margin-top: 136px;
 }
 
 .price-detail-info p {
@@ -934,17 +933,12 @@ img {
 }
 
 .price-detail-item:hover {
-    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid #fff;
+    transition: .5s;
 }
 
 .price-detail-item a:hover {
     cursor: pointer;
-}
-
-.border {
-    margin-top: 136px;
-    padding: 0;
-    border: 1px solid #525252;
 }
 
 @media(max-width: 992px) {
@@ -1029,7 +1023,7 @@ img {
 }
 
 .faq-item {
-    max-width: 856px;
+    width: 856px;
     display: flex;
     align-items: center;
     border: 1px solid #525252;
@@ -1067,5 +1061,9 @@ img {
     .faq h3 {
         font-size: 20px;
         padding-bottom: 48px;
+    }
+
+    .faq-item {
+        max-width: 100%;
     }
 }
